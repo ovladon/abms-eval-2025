@@ -1,0 +1,585 @@
+{
+  "topics": [
+    {
+      "name": "Highly Negative Sentiment Content",
+      "conditions": {
+        "sentiment_analysis": { "min": -1.0, "max": -0.8 }
+      },
+      "keywords": ["complaint", "criticism", "frustration", "anger", "disappointment"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.1016/j.obhdp.2021.02.002",
+          "reference_explanation": "This study examines how expressing negative emotions impacts interpersonal relationships, which is relevant to texts with highly negative sentiments."
+        },
+        {
+          "reference": "https://doi.org/10.1016/j.jbusres.2022.113628",
+          "reference_explanation": "Discusses the effects of negative emotional expression on message interpretation and audience trust, aligning with texts expressing strong criticism."
+        }
+      ],
+      "machine_tags": ["negative_sentiment", "complaint", "criticism"],
+      "human_description": "The text expresses a highly negative sentiment, likely containing strong criticism or complaints about a subject.",
+      "confidence_score": 0.95
+    },
+    {
+      "name": "Moderately Negative Sentiment Content",
+      "conditions": {
+        "sentiment_analysis": { "min": -0.8, "max": -0.6 }
+      },
+      "keywords": ["concern", "dissatisfaction", "issues", "problems"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.1037/0033-2909.119.2.254",
+          "reference_explanation": "Explores how moderately negative feedback can impact performance and attitudes, providing insight into how constructive criticism affects perception."
+        },
+        {
+          "reference": "https://doi.org/10.1057/palgrave.crr.1550049",
+          "reference_explanation": "Analyzes the impact of moderately negative communication (e.g., crisis responses) on organizational reputation, showing how handling issues publicly influences public perception."
+        }
+      ],
+      "machine_tags": ["negative_sentiment", "concern"],
+      "human_description": "The text conveys a moderately negative sentiment, possibly discussing concerns or problems with a topic.",
+      "confidence_score": 0.85
+    },
+    {
+      "name": "Neutral Informative Content",
+      "conditions": {
+        "sentiment_analysis": { "min": -0.1, "max": 0.1 }
+      },
+      "keywords": ["information", "facts", "neutral", "unbiased"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.1177/1077699012468742",
+          "reference_explanation": "Explores the role of objectivity in news reporting and how audiences prefer unbiased information sources, underscoring the importance of neutrality in content."
+        },
+        {
+          "reference": "https://doi.org/10.1037/0022-3514.49.3.577",
+          "reference_explanation": "Examines how neutral (or balanced) reporting is perceived by audiences, noting that even balanced news can be seen as biased depending on the reader’s perspective."
+        }
+      ],
+      "machine_tags": ["neutral_tone", "informative", "factual"],
+      "human_description": "The content presents information in a neutral, factual manner without evident bias or emotion.",
+      "confidence_score": 0.9
+    },
+    {
+      "name": "Highly Positive Sentiment Content",
+      "conditions": {
+        "sentiment_analysis": { "min": 0.8, "max": 1.0 }
+      },
+      "keywords": ["praise", "enthusiasm", "support", "optimism", "gratitude"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.1037/0003-066X.56.3.218",
+          "reference_explanation": "Examines how expressing positive emotions can build social bonds and improve interpersonal outcomes, supporting the idea that very positive sentiment fosters connection."
+        },
+        {
+          "reference": "https://doi.org/10.1073/pnas.1320040111",
+          "reference_explanation": "Studies the psychological impact of positive sentiment expression on recipients, showing that sharing positive emotions can uplift others and spread positivity (emotional contagion)."
+        }
+      ],
+      "machine_tags": ["positive_sentiment", "praise", "enthusiasm"],
+      "human_description": "The text carries a very positive sentiment, likely expressing praise, enthusiasm, or optimism about the subject.",
+      "confidence_score": 0.95
+    },
+    {
+      "name": "Technical Scientific Article",
+      "conditions": {
+        "content_classification": "Scientific"
+      },
+      "keywords": ["research", "study", "experiment", "scientific terms", "jargon"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.7554/eLife.27725",
+          "reference_explanation": "Analyzes the readability of scientific texts over time and the effect of technical jargon on understanding, noting that increased jargon can decrease readability."
+        },
+        {
+          "reference": "https://doi.org/10.1002/acp.1178",
+          "reference_explanation": "Examines how complex vocabulary and writing style impact reader comprehension, finding that using overly complicated language can hinder understanding."
+        }
+      ],
+      "machine_tags": ["technical", "scientific_jargon", "research_article"],
+      "human_description": "The content is a scientific article with technical language and specialized terminology, likely reporting on research findings.",
+      "confidence_score": 0.9
+    },
+    {
+      "name": "High Readability Educational Material",
+      "conditions": {
+        "content_classification": "Educational"
+      },
+      "keywords": ["clear", "easy-to-read", "educational", "instructional"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.1007/s11145-018-9883-0",
+          "reference_explanation": "Reviews effective educational practices, showing that materials with higher readability (simpler language) improve students’ comprehension and recall."
+        },
+        {
+          "reference": "https://doi.org/10.1017/S014271642100062X",
+          "reference_explanation": "Discusses how simplifying educational text can enhance learning outcomes for students, demonstrating that clarity and simplicity in materials lead to better understanding."
+        }
+      ],
+      "machine_tags": ["educational", "clear_language", "readability"],
+      "human_description": "The material is educational and written in a clear, straightforward manner, making it easy for readers (such as students) to understand.",
+      "confidence_score": 0.88
+    },
+    {
+      "name": "Emotional Personal Narrative",
+      "conditions": {
+        "content_classification": "Narrative"
+      },
+      "keywords": ["personal story", "emotional", "first-person", "anecdote"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.1080/15213260701853112",
+          "reference_explanation": "Studies how personal narratives that evoke strong emotions (like fear or sadness) impact readers, finding that emotional stories can change risk perceptions and engagement."
+        },
+        {
+          "reference": "https://doi.org/10.1177/0146167219853845",
+          "reference_explanation": "Examines the role of emotional storytelling versus factual reporting, showing that a personal, emotional story (identifiable individual) provokes greater empathy and response than neutral statistics."
+        }
+      ],
+      "machine_tags": ["narrative", "emotional_content", "personal_story"],
+      "human_description": "The content is a personal narrative with emotional elements, likely describing personal experiences in a way that evokes feelings.",
+      "confidence_score": 0.9
+    },
+    {
+      "name": "Objective News Reporting",
+      "conditions": {
+        "content_classification": "News"
+      },
+      "keywords": ["news", "reporting", "objective", "factual", "unbiased"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.1177/0196859912458700",
+          "reference_explanation": "Explores the principles of objective journalism and how younger audiences respond to neutrality in news, emphasizing the value of unbiased reporting&#8203;:contentReference."
+        },
+        {
+          "reference": "https://doi.org/10.1037/0022-3514.49.3.577",
+          "reference_explanation": "Analyzes how an objective, balanced news story is perceived by different groups, illustrating the challenges of maintaining credibility and how audiences may still perceive bias."
+        }
+      ],
+      "machine_tags": ["news", "objective", "unbiased"],
+      "human_description": "The article is written in a journalistic news style that strives for objectivity, presenting facts without personal bias or opinion.",
+      "confidence_score": 0.92
+    },
+    {
+      "name": "Persuasive Marketing Content",
+      "conditions": {
+        "content_classification": "Marketing"
+      },
+      "keywords": ["advertising", "persuasive", "marketing", "influence", "call-to-action"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.1086/208954",
+          "reference_explanation": "Discusses strategies in marketing communications (central vs. peripheral persuasive cues) to influence consumer behavior, highlighting how message involvement and arguments affect persuasion."
+        },
+        {
+          "reference": "https://doi.org/10.52783/eel.v14i1.1091",
+          "reference_explanation": "Examines the role of persuasive language and emotional appeals in advertisements, demonstrating how positive feelings evoked by marketing content can sway consumer attitudes."
+        }
+      ],
+      "machine_tags": ["marketing", "persuasion", "advertising"],
+      "human_description": "The content is marketing-oriented and uses persuasive language and techniques to influence the audience’s attitudes or behavior toward a product or idea.",
+      "confidence_score": 0.9
+    },
+    {
+      "name": "Educational Content for Children",
+      "conditions": {
+        "content_classification": "Educational"
+      },
+      "keywords": ["children", "learning", "simple language", "engaging", "age-appropriate"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.1186/s40561-019-0085-2",
+          "reference_explanation": "Discusses the importance of engagement in educational content for children, showing that interactive and gamified learning experiences enhance children’s learning outcomes."
+        },
+        {
+          "reference": "https://doi.org/10.1207/s15326985ep3801_6",
+          "reference_explanation": "Analyzes how simplicity and reducing cognitive load in instructional materials improve learning for young students, indicating that clear, age-appropriate language boosts comprehension."
+        }
+      ],
+      "machine_tags": ["children", "educational", "engaging"],
+      "human_description": "The content is educational material designed for children, using simple, engaging language and methods suitable for a younger audience to facilitate learning.",
+      "confidence_score": 0.93
+    },
+    {
+      "name": "Technical Manual",
+      "conditions": {
+        "content_classification": "Instructional"
+      },
+      "keywords": ["manual", "instructions", "technical", "steps", "procedure"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.30574/wjarr.2024.22.1.1020",
+          "reference_explanation": "Analyzes features of effective technical manuals, noting how clarity and organization impact user ability to follow instructions."
+        },
+        {
+          "reference": "https://www.researchgate.net/publication/232181928_Deep-Level_Comprehension_of_Science_Texts_The_Role_of_the_Reader_and_the_Text",
+          "reference_explanation": "Discusses user comprehension of technical instructions and highlights best practices in technical documentation to improve actionability."
+        }
+      ],
+      "machine_tags": ["technical_documentation", "user_manual"],
+      "human_description": "The content is a technical manual, providing step-by-step instructions or information about a process or product, likely intended to guide the user through specific procedures.",
+      "confidence_score": 0.88
+    },
+    {
+      "name": "Legal Document",
+      "conditions": {
+        "content_classification": "Legal"
+      },
+      "keywords": ["legal", "contract", "formal", "legislation", "regulation"],
+      "references": [
+        {
+          "reference": "https://www.taylorfrancis.com/chapters/oa-mono/10.4324/9781315436258-13/linguistic-features-legal-language-alan-durant-janny-leung?context=ubx&refId=5be4b537-ba29-405e-b1dd-c5f6cf945481",
+          "reference_explanation": "Examines linguistic characteristics of legal documents, explaining why they are often complex and how that affects understanding."
+        },
+        {
+          "reference": "https://arxiv.org/html/2411.09497v1#abstract",
+          "reference_explanation": "Analyzes readability and complexity in legal texts, illustrating the challenges readers face when interpreting formal legal language."
+        }
+      ],
+      "machine_tags": ["legal_language", "formal_style"],
+      "human_description": "The text is a formal legal document, such as a contract or legislation, characterized by complex sentences, specialized terminology, and a formal tone.",
+      "confidence_score": 0.9
+    },
+    {
+      "name": "Humorous Content",
+      "conditions": {
+        "content_classification": "Humorous"
+      },
+      "keywords": ["humor", "joke", "satire", "comedy", "wit"],
+      "references": [
+        {
+          "reference": "https://en.wikipedia.org/wiki/Theories_of_humor",
+          "reference_explanation": "Explores linguistic mechanisms of humor in text, shedding light on how wordplay and incongruity create comedic effect."
+        },
+        {
+          "reference": "https://doi.org/10.5964/ejop.10013",
+          "reference_explanation": "Studies the psychological effects of humorous content on readers, indicating how humor can affect mood and engagement."
+        }
+      ],
+      "machine_tags": ["humor", "satire", "comedy"],
+      "human_description": "The content is intended to be humorous or funny, potentially using jokes, satire, or witty remarks to entertain the reader.",
+      "confidence_score": 0.85
+    },
+    {
+      "name": "Critical Review",
+      "conditions": {
+        "content_classification": "Review"
+      },
+      "keywords": ["critique", "evaluation", "analysis", "opinionated"],
+      "references": [
+        {
+          "reference": "https://www.researchgate.net/publication/265166759_The_Role_of_Media_Critics_in_the_Cultural_Industries",
+          "reference_explanation": "Examines the role of critical reviews in media, explaining how in-depth critiques can influence audience perceptions of creative works."
+        },
+        {
+          "reference": "https://doi.org/10.1016/j.chb.2021.106912",
+          "reference_explanation": "Discusses the impact of critical evaluations on audiences, such as how negative and positive reviews affect public opinion and interest."
+        }
+      ],
+      "machine_tags": ["review", "critique", "analysis"],
+      "human_description": "The content is a critical review, providing an evaluative analysis of a subject (like a book, film, or policy) and often offering opinions or judgments.",
+      "confidence_score": 0.9
+    },
+    {
+      "name": "Instructional Guide with High Actionability",
+      "conditions": {
+        "content_classification": "HowTo"
+      },
+      "keywords": ["guide", "actionable", "step-by-step", "instructions", "tips"],
+      "references": [
+        {
+          "reference": "https://www.researchgate.net/publication/384500071_The_Social_Action-Oriented_Approach_in_Language_Teaching_From_Social_Goals_to_Practices",
+          "reference_explanation": "Explores the effectiveness of action-oriented instruction in user guides, emphasizing the importance of clear steps and user engagement in procedural content."
+        },
+        {
+          "reference": "http://dx.doi.org/10.1007/s11423-024-10346-0",
+          "reference_explanation": "Analyzes how making instructions highly actionable (with concrete steps and examples) affects user engagement and success in completing tasks."
+        }
+      ],
+      "machine_tags": ["howto", "actionable_tips", "instructions"],
+      "human_description": "The content is a highly actionable instructional guide, giving clear, step-by-step guidance or tips that readers can readily follow to achieve a specific outcome.",
+      "confidence_score": 0.93
+    },
+    {
+      "name": "Opinionated Blog Post",
+      "conditions": {
+        "content_classification": "Blog"
+      },
+      "keywords": ["opinion", "personal view", "commentary", "blog"],
+      "references": [
+        {
+          "reference": "http://dx.doi.org/10.1108/00012531311313989",
+          "reference_explanation": "Examines personal blogging and self-expression online and provides an example of the fulfillment of different information needs through the creation of a virtual presence on a blog and examines the dichotomy present in blogging between the private and the public spheres.."
+        },
+        {
+          "reference": "https://www.researchgate.net/publication/228845581_How_Blogs_and_Social_Media_are_Changing_Public_Relations_and_the_Way_it_is_Practiced",
+          "reference_explanation": "Discusses how personal blogs influence public discourse by allowing opinionated commentary and the spread of individual perspectives."
+        }
+      ],
+      "machine_tags": ["blog", "opinion", "personal_commentary"],
+      "human_description": "The content is an opinionated blog post, reflecting the personal views or commentary of the author on a particular topic, likely informal in tone and subjective in nature.",
+      "confidence_score": 0.87
+    },
+    {
+      "name": "Data-Driven Report",
+      "conditions": {
+        "content_classification": "Report"
+      },
+      "keywords": ["data", "statistics", "analysis", "evidence", "report"],
+      "references": [
+        {
+          "reference": "http://dx.doi.org/10.13140/RG.2.2.27930.34242",
+          "reference_explanation": "Discusses the importance of data-driven approaches in reports, emphasizing how statistical evidence can enhance credibility and decision-making."
+        },
+        {
+          "reference": "https://doi.org/10.5688/ajpe7124",
+          "reference_explanation": "The efficient presentation of results can impact a reader’s assessment of the quality and credibility of a study."
+        }
+      ],
+      "machine_tags": ["data_analysis", "statistical_report", "evidence_based"],
+      "human_description": "The content is a data-driven report, rich in statistics or empirical evidence. It focuses on presenting data and analysis in a factual manner to inform or support conclusions.",
+      "confidence_score": 0.9
+    },
+    {
+      "name": "Creative Fiction Story",
+      "conditions": {
+        "content_classification": "Fiction"
+      },
+      "keywords": ["creative writing", "fiction", "storytelling", "imaginative"],
+      "references": [
+        {
+          "reference": "https://www.bbc.co.uk/bitesize/articles/zk972v4#z8jhp4j",
+          "reference_explanation": "Explores narrative techniques in creative fiction, discussing how storytelling elements engage readers’ imagination and emotions."
+        },
+        {
+          "reference": "https://doi.org/10.1080/00111619.2014.893578",
+          "reference_explanation": "Writing skills - creative and narrative writing"
+        }
+      ],
+      "machine_tags": ["fiction", "story", "creative_writing"],
+      "human_description": "The content is a creative fiction story, featuring imaginative storytelling, characters, or plot. It is crafted to entertain or provoke thought through narrative.",
+      "confidence_score": 0.88
+    },
+    {
+      "name": "Global News with Spatial References",
+      "conditions": {
+        "content_classification": "News"
+      },
+      "keywords": ["international", "geographic", "spatial references", "locations"],
+      "references": [
+        {
+          "reference": "http://dx.doi.org/10.16997/wpcc.285",
+          "reference_explanation": "Examines how global news is reported with spatial context, noting that including geographic details can shape audience understanding of international events."
+        },
+        {
+          "reference": "http://dx.doi.org/10.3390/fi4010161",
+          "reference_explanation": "Discusses the impact of spatial references in international journalism, indicating that location-based context helps readers connect to global news stories."
+        }
+      ],
+      "machine_tags": ["international_news", "geographic_context"],
+      "human_description": "The content is a news piece with an international scope, containing spatial references (such as locations, regions, or maps) to give geographic context to the events being reported.",
+      "confidence_score": 0.89
+    },
+    {
+      "name": "Technical Documentation with Low Readability",
+      "conditions": {
+        "content_classification": "Technical"
+      },
+      "keywords": ["technical", "complex", "jargon-heavy", "dense text"],
+      "references": [
+        {
+          "reference": "http://dx.doi.org/10.47577/tssj.v28i1.5919",
+          "reference_explanation": "Discusses challenges of writing technical documentation that is dense with jargon and technical details, and the implications for user understanding."
+        },
+        {
+          "reference": "https://doi.org/10.1111/1753-6405.13066",
+          "reference_explanation": "Government departments need to consider their audience and monitor readability of the documents they produce to ensure that readers can understand them."
+        }
+      ],
+      "machine_tags": ["technical_documentation", "low_readability"],
+      "human_description": "The text is technical documentation with low readability, characterized by highly specialized jargon, complex sentences, and a dense presentation that can be difficult for readers to follow.",
+      "confidence_score": 0.84
+    },
+    {
+      "name": "Philosophical Discourse",
+      "conditions": {
+        "content_classification": "Philosophy"
+      },
+      "keywords": ["philosophy", "abstract", "theoretical", "argumentative"],
+      "references": [
+        {
+          "reference": "https://mysite.cs.cf.ac.uk/CaminadaM/publications/BNAIC_limitations_abstract.pdf",
+          "reference_explanation": "Explores the nature of philosophical writing and its use of abstract argumentation, helping explain why such discourse can be challenging to read."
+        },
+        {
+          "reference": "http://dx.doi.org/10.emerg/10.17357.c9734094d98458109d25b79d546318af.",
+          "reference_explanation": "Analyzes complexity in philosophical discourse, discussing how theoretical depth and abstract concepts contribute to its interpretative difficulty."
+        }
+      ],
+      "machine_tags": ["philosophy", "abstract_thought", "theoretical"],
+      "human_description": "The content is a philosophical discourse, featuring abstract reasoning, theoretical discussions, and a formal argumentative style that explores fundamental concepts or questions.",
+      "confidence_score": 0.88
+    },
+    {
+      "name": "Financial Report with High Reliability",
+      "conditions": {
+        "content_classification": "Financial"
+      },
+      "keywords": ["financial report", "data", "audited", "factual", "reliable"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.1016/j.jaccpubpol.2012.05.003",
+          "reference_explanation": "Discusses reliability in financial reporting, focusing on how standardized accounting practices (like harmonized standards) affect the trustworthiness of financial disclosures."
+        },
+        {
+          "reference": "https://doi.org/10.2308/accr-50225",
+          "reference_explanation": "Analyzes the role of quantitative data and international standards in enhancing the reliability and credibility of financial reports."
+        }
+      ],
+      "machine_tags": ["financial_reporting", "reliable_data", "audit"],
+      "human_description": "The document is a financial report presented with a high level of reliability, likely containing audited figures, detailed quantitative data, and adhering to standard accounting principles to ensure accuracy.",
+      "confidence_score": 0.92
+    },
+    {
+      "name": "Instructional Content for Professional Development",
+      "conditions": {
+        "content_classification": "Instructional"
+      },
+      "keywords": ["professional development", "training", "guidance", "skills"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.1177/1534484312439196",
+          "reference_explanation": "Explores effective instructional strategies for adult professional learning, emphasizing clear objectives and practical exercises to build skills. Explores a framework of self-directed leadership development (SDLD) to advance conceptual understanding and practical applications for self-development approaches to development of leaders in organizations."
+        },
+        {
+          "reference": "http://dx.doi.org/10.1080/14703297.2013.829408",
+          "reference_explanation": "Presents a learning and teaching strategy based on complexity science and explores its impacts on a higher education game design course."
+        }
+      ],
+      "machine_tags": ["professional_training", "skills_development"],
+      "human_description": "The content provides instructional material aimed at professional development, offering guidance or training to help adults improve their skills or knowledge in a workplace or career context.",
+      "confidence_score": 0.91
+    },
+    {
+      "name": "Satirical Content with High Humor",
+      "conditions": {
+        "content_classification": "Satire"
+      },
+      "keywords": ["satire", "irony", "parody", "humor", "social commentary"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.1093/acrefore/9780190228613.013.871",
+          "reference_explanation": "Academic scholarship centered on the interplay of satire and journalism emanates from a variety of research orientations, employs a diversity of methods, and focuses on a wide range of topics and cultural contexts."
+        },
+        {
+          "reference": "http://dx.doi.org/10.1177/00936502211032100",
+          "reference_explanation": "Examines how humor in satire affects message reception, finding that comedic framing can both engage and inform audiences on serious topics."
+        }
+      ],
+      "machine_tags": ["satire", "ironic_tone", "humorous"],
+      "human_description": "The content is satirical, using humor, irony, or exaggeration to critique or comment on a subject. It has a high level of humor embedded in the commentary, typical of satirical pieces.",
+      "confidence_score": 0.86
+    },
+    {
+      "name": "Scientific Article with High Novelty",
+      "conditions": {
+        "content_classification": "Scientific"
+      },
+      "keywords": ["novel research", "groundbreaking", "innovative", "new findings"],
+      "references": [
+        {
+          "reference": "https://doi.org/10.4000/rei.10503",
+          "reference_explanation": "Discusses the importance of novelty in scientific research publications, noting how new and innovative findings contribute to scientific impact."
+        },
+        {
+          "reference": "https://doi.org/10.1162/qss_a_00316",
+          "reference_explanation": "Presents a percentile-distribution-based proposal for assessing the influence of scientific journals and publications that corrects several of the journal impact factor's main technical limitations using the same set of documents as is used to calculate the IF."
+        }
+      ],
+      "machine_tags": ["scientific_novelty", "innovative_research"],
+      "human_description": "The content is a scientific article presenting highly novel research findings. It likely emphasizes new, innovative results or methodologies that mark a significant advance in its field.",
+      "confidence_score": 0.9
+    },
+    {
+      "name": "Controversial Opinion Piece",
+      "conditions": {
+        "content_classification": "Opinion"
+      },
+      "keywords": ["controversial", "opinion", "argumentative", "provocative"],
+      "references": [
+        {
+          "reference": "https://projects.uni-foundation.eu/erum/wp-content/uploads/sites/2/2020/08/ERUM-IO1-General-Report_final.pdf",
+          "reference_explanation": "Explores how controversial topics are presented in opinion journalism and the rhetorical strategies used to engage readers and provoke discussion."
+        },
+        {
+          "reference": "https://doi.org/10.1177/01461672211030816",
+          "reference_explanation": "Analyzes the impact of controversial editorials on public debate, illustrating how polarizing opinions can influence and divide audience responses."
+        }
+      ],
+      "machine_tags": ["opinion", "controversy", "argument"],
+      "human_description": "The content is an opinion piece taking a controversial stance on an issue. It is argumentative and provocative, likely aiming to challenge readers or spark debate.",
+      "confidence_score": 0.88
+    },
+    {
+      "name": "First-Person Narrative with High Novelty",
+      "conditions": {
+        "content_classification": "Narrative"
+      },
+      "keywords": ["first-person", "unique perspective", "novel experience", "personal"],
+      "references": [
+        {
+          "reference": "http://dx.doi.org/10.52086/001c.26851",
+          "reference_explanation": "Examines the role of personal narratives in conveying unique experiences, emphasizing how a first-person perspective can provide fresh insights or novel viewpoints. The use of personal narrative aids connection with current service users, demonstrating that hope for a better life is possible, and challenging stereotypical or stigmatizing attitudes by highlighting shared humanity and common human experiences."
+        },
+        {
+          "reference": "http://dx.doi.org/10.1145/1871437.1871659",
+          "reference_explanation": "Demonstrates how the novelty of newly published content plays an important role in affecting its popularity."
+        }
+      ],
+      "machine_tags": ["personal_narrative", "unique_experience"],
+      "human_description": "The content is a first-person narrative that describes a highly novel or unique personal experience. It provides an original perspective, likely intriguing readers with its uncommon story or approach.",
+      "confidence_score": 0.9
+    },
+    {
+      "name": "Instructional Content with Multimodality",
+      "conditions": {
+        "content_classification": "Educational"
+      },
+      "keywords": ["multimedia", "multimodal", "interactive", "visual aids"],
+      "references": [
+        {
+          "reference": "http://dx.doi.org/10.29062/edu.v4i3.194",
+          "reference_explanation": "Analyzes the effectiveness of multimodal instructional materials (combining text, images, etc.) on learning, showing improved understanding when multiple modes are used."
+        },
+        {
+          "reference": "http://dx.doi.org/10.14742/apubs.2010.2003",
+          "reference_explanation": "Explores how combining text, images, and videos enhances educational content, indicating that multimodal learning resources can increase student engagement and retention."
+        }
+      ],
+      "machine_tags": ["multimedia_learning", "visual_aids"],
+      "human_description": "The content is instructional and employs multimodal elements (such as text accompanied by images, videos, or other media) to convey information, aiming to enhance learning through multiple forms of content.",
+      "confidence_score": 0.89
+    },
+    {
+      "name": "Historical Narrative with Spatial References",
+      "conditions": {
+        "content_classification": "Historical"
+      },
+      "keywords": ["historical", "story", "timeline", "spatial context", "places"],
+      "references": [
+        {
+          "reference": "http://dx.doi.org/10.1007/s10708-008-9202-4",
+          "reference_explanation": "How narratives of history are organized spatially at historical sites and memorial spaces, especially in urban settings and in places invested with a sense of collective memory."
+        },
+        {
+          "reference": "http://dx.doi.org/10.1007/s10708-008-9202-4",
+          "reference_explanation": "This paper examines how narratives of history are organized spatially at historical sites and memorial spaces, especially in urban settings and in places invested with a sense of collective memory."
+        }
+      ],
+      "machine_tags": ["historical", "geographical_context", "narrative"],
+      "human_description": "The content is a historical narrative that includes spatial references (locations, regions) and possibly temporal context, weaving a story about past events with attention to where things happened.",
+      "confidence_score": 0.9
+    }
+  ]
+}
+
