@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "abms"
+version = "0.0.0"
+description = "Aspect-Based Metadata System"
+requires-python = ">=3.9"
+dependencies = []      # keep empty; env.yml handles deps
+
+[tool.setuptools.packages.find]
+where = ["src"]        # tell setuptools to look in ./src
+
+[project.scripts]
+abms = "abms.cli:main"     # <- Case A
+# ↓ If Case B instead, comment the line above and uncomment next:
+# abms = "abms.encode:main"
