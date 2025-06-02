@@ -1,18 +1,17 @@
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "abms"
-version = "0.0.0"
-description = "Aspect-Based Metadata System"
-requires-python = ">=3.9"
-dependencies = []      # keep empty; env.yml handles deps
+version = "0.1.0"
+description = "Aspect-Based Metadata Suite"
+readme = "README.md"
+requires-python = ">=3.10"
 
-[tool.setuptools.packages.find]
-where = ["src"]        # tell setuptools to look in ./src
+[tool.setuptools]
+package-dir = {"" = "src"}          # “src layout” root
 
-[project.scripts]
-abms = "abms.cli:main"     # <- Case A
-# ↓ If Case B instead, comment the line above and uncomment next:
-# abms = "abms.encode:main"
+[tool.setuptools.packages.find]      # ← find-table, **not** an array
+where      = ["src"]                # look under src/
+include    = ["abms*",]             # take abms and its subpackages
